@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import contactList from '../contacts';
+import contacts from '../contacts';
 
 @Component({
   selector: 'app-contact-list',
@@ -13,7 +13,7 @@ export class ContactListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.contacts = contactList;
+    this.contacts = contacts;
   }
 
   addContact(){
