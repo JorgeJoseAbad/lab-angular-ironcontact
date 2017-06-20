@@ -17,6 +17,24 @@
 
 <button (click)="addContact()">Submit New Contact</button>
 
+<div>
+  <label for="contact-search"></label>
+  <input type="text" [(ngModel)]="contactSearch">
+</div>
+
+<button (click)="contactSearch()">Search for a Contact</button>
+<div class="">
+  Found:
+  <ul>
+    <li *ngFor="let item of contacts | find:'name':contactSearch;">
+      <span>{{item.name}}</span>
+      <span>{{item.email}}</span>
+      <span>{{item.phoneNumber}}</span>
+      <span><img class="picture" src="{{item.image}}"></span>
+    </li>
+  </ul>
+</div>
+
 <ul>
   <li *ngFor="let contact of contacts">
     <span>{{contact.name}}<!-- contact name --></span>

@@ -6,10 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 
+import { FindPipe } from 'app/pipes/find.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent
+    ContactListComponent,
+    FindPipe
   ],
   imports: [
     BrowserModule,
